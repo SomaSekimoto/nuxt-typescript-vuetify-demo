@@ -34,7 +34,7 @@
             Find a bug? Report it on the github <a
               href="https://github.com/vuetifyjs/vuetify/issues"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer"＞
               title="contribute"
             >
               issue board
