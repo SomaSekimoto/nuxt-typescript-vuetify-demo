@@ -56,7 +56,7 @@ const createTodoDtoDefaults: Todo = Object.freeze({
 
 const deleteTodoDtoDefaults: TodoForDel = Object.freeze({
   id: 0,
-  _version: null
+  _version: 0
 });
 
 export default defineComponent({
