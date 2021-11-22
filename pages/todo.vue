@@ -9,7 +9,13 @@
         </v-form>
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="6" lg="6" xl="6">
-        <v-text-field @input="filterTodos(keyword.keyword)" v-model="keyword.keyword"></v-text-field>
+        <v-text-field
+          outlined
+          dense
+          placeholder="キーワードで絞る"
+          @input="filterTodos(reactiveData.keyword)"
+          v-model="reactiveData.keyword"
+        ></v-text-field>
         <v-list>
           <v-list-item v-for="(item, index) in todos" :key="index">
             <v-list-item-content>
@@ -36,7 +42,6 @@ import {
 import { createTodo, deleteTodo } from "~/src/graphql/mutations";
 import { API, graphqlOperation } from "aws-amplify";
 import { listTodos, syncTodos } from "~/src/graphql/queries";
-import { Todo } from "../src/models";
 import { DataStore } from "@aws-amplify/datastore";
 
 type Todo = {
@@ -56,7 +61,7 @@ const createTodoDtoDefaults: Todo = Object.freeze({
 
 const deleteTodoDtoDefaults: TodoForDel = Object.freeze({
   id: 0,
-  _version: null
+  _version: 0
 });
 
 export default defineComponent({
@@ -72,7 +77,7 @@ export default defineComponent({
     const formRef = ref();
 
     // const keyword = ref();
-    const keyword = reactive<{ keyword: string }>({
+    const reactiveData = reactive<{ keyword: string }>({
       keyword: ""
     });
 
@@ -153,7 +158,7 @@ export default defineComponent({
       submit,
       remove,
       filterTodos,
-      keyword,
+      reactiveData,
       requiredRule
     };
   }

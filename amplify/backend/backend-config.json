@@ -23,5 +23,19 @@
       "providerPlugin": "awscloudformation",
       "type": "manual"
     }
+  },
+  "auth": {
+    "nuxttsvuetify8b1af35e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "nuxttsvuetifystorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
