@@ -16,13 +16,13 @@ import {
 } from "@vue/composition-api";
 import Amplify, { Storage } from "aws-amplify";
 import { API, graphqlOperation } from "aws-amplify";
-import fetchS3Files from "~/src/graphql/queries";
+import { echo } from "~/src/graphql/queries";
 export default defineComponent({
   setup() {
     async function connectLambdaFunc() {
       console.log("start connectiong lambda");
       const response = await API.graphql({
-        query: fetchS3Files
+        query: echo
       });
       console.log(response);
     }

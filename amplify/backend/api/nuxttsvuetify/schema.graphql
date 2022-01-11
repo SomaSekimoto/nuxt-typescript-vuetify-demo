@@ -3,3 +3,6 @@ type Todo @model {
   name: String!
   description: String
 }
+type Query {
+  echo(msg: String): String @function(name: "nuxttsvuetifya4257c20-${env}")
+}

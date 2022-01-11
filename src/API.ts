@@ -170,6 +170,14 @@ export type DeleteTodoMutation = {
   } | null,
 };
 
+export type EchoQueryVariables = {
+  msg?: string | null,
+};
+
+export type EchoQuery = {
+  echo?: string | null,
+};
+
 export type SyncTodosQueryVariables = {
   filter?: ModelTodoFilterInput | null,
   limit?: number | null,
