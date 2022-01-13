@@ -3,8 +3,10 @@
 // this is an auto generated file. This will be overwritten
 
 export const echo = /* GraphQL */ `
-  query Echo($msg: String) {
-    echo(msg: $msg)
+  query Echo {
+    echo {
+      body
+    }
   }
 `;
 export const syncTodos = /* GraphQL */ `

@@ -81,6 +81,11 @@ export type DeleteTodoInput = {
   _version?: number | null,
 };
 
+export type Echo = {
+  __typename: "Echo",
+  body?: string | null,
+};
+
 export type ModelTodoFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -170,12 +175,11 @@ export type DeleteTodoMutation = {
   } | null,
 };
 
-export type EchoQueryVariables = {
-  msg?: string | null,
-};
-
 export type EchoQuery = {
-  echo?: string | null,
+  echo?:  {
+    __typename: "Echo",
+    body?: string | null,
+  } | null,
 };
 
 export type SyncTodosQueryVariables = {

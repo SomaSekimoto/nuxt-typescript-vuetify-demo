@@ -3,6 +3,9 @@ type Todo @model {
   name: String!
   description: String
 }
+type Echo {
+  body: String
+}
 type Query {
-  echo(msg: String): String @function(name: "nuxttsvuetifya4257c20-${env}")
+  echo: Echo @function(name: "nuxttsvuetifya4257c20-${env}")
 }

@@ -2,7 +2,9 @@
   <div>
     <h1>Images</h1>
     <v-list>
-      <v-list-item></v-list-item>
+      <v-list-item>
+        <p>{{ data.message }}</p>
+      </v-list-item>
     </v-list>
   </div>
 </template>
@@ -19,16 +21,21 @@ import { API, graphqlOperation } from "aws-amplify";
 import { echo } from "~/src/graphql/queries";
 export default defineComponent({
   setup() {
+    const data = reactive<{ message: string }>({
+      message: ""
+    });
     async function connectLambdaFunc() {
       console.log("start connectiong lambda");
       const response = await API.graphql({
         query: echo
       });
       console.log(response);
+      data.message = JSON.parse(response.data.echo.body);
     }
     onMounted(() => {
       connectLambdaFunc();
     });
+    return { data };
   }
 });
 </script>
