@@ -1,9 +1,15 @@
 import json
+import requests
+import os
 
 def handler(event, context):
   print('received event:')
   print(event)
-  
+
+  response = requests.get( os.getenv('FETCH_IMAGES_HOST') + '/all_files')
+  print(response.text)
+  body = json.loads(response.text)
+
   return {
       'statusCode': 200,
       'headers': {
@@ -11,5 +17,9 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps('Hello from your new Amplify Python lambda!')
+      'body': json.dumps(body)
   }
+
+
+if __name__ == "__main__":
+  print(handler(None, None))

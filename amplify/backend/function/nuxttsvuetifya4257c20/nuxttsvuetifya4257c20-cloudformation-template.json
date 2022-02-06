@@ -30,6 +30,9 @@
     "apinuxttsvuetifyGraphQLAPIKeyOutput": {
       "Type": "String",
       "Default": "apinuxttsvuetifyGraphQLAPIKeyOutput"
+    },
+    "fetchImagesHost": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -96,6 +99,9 @@
             },
             "MAYU_FUNCTION_ENV": {
               "Ref": "mayuFunctionEnv"
+            },
+            "FETCH_IMAGES_HOST": {
+              "Ref": "fetchImagesHost"
             }
           }
         },
