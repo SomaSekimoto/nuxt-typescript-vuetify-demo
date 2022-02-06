@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "api": {
+      "nuxttsvuetify": [
+        "Query"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "mayuFunctionEnv",
+      "environmentVariableName": "MAYU_FUNCTION_ENV"
+    },
+    {
+      "cloudFormationParameterName": "fetchImagesHost",
+      "environmentVariableName": "FETCH_IMAGES_HOST"
+    }
+  ]
+}

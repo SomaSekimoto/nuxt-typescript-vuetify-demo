@@ -2,10 +2,10 @@
   <div>
     <p>松岡茉優</p>
     <v-list v-if="reactiveData.media.length">
-      <v-list-item v-for=" (obj,i) in reactiveData.media" :key="i">
+      <v-list-item v-for="(obj, i) in reactiveData.media" :key="i">
         <template v-if="obj.key != ''">
           <v-list-item-content>
-            <v-list-item-title>{{obj.key}}</v-list-item-title>
+            <v-list-item-title>{{ obj.key }}</v-list-item-title>
             <template v-if="obj.url && obj.url.match(/\.(mp4)/)">
               <video :src="obj.url" controls />
             </template>
@@ -55,7 +55,7 @@ export default defineComponent({
       let presignedUrl: string = "";
       await Storage.get(s3Key)
         .then(result => {
-          presignedUrl = result;
+          let presignedUrl = result;
         })
         .catch(err => console.log(err));
       console.log(presignedUrl);

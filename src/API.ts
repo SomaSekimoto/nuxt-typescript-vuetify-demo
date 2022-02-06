@@ -81,6 +81,11 @@ export type DeleteTodoInput = {
   _version?: number | null,
 };
 
+export type Echo = {
+  __typename: "Echo",
+  body?: string | null,
+};
+
 export type ModelTodoFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -167,6 +172,13 @@ export type DeleteTodoMutation = {
     _lastChangedAt: number,
     createdAt: string,
     updatedAt: string,
+  } | null,
+};
+
+export type EchoQuery = {
+  echo?:  {
+    __typename: "Echo",
+    body?: string | null,
   } | null,
 };
 

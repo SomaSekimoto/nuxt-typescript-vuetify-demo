@@ -2,6 +2,13 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const echo = /* GraphQL */ `
+  query Echo {
+    echo {
+      body
+    }
+  }
+`;
 export const syncTodos = /* GraphQL */ `
   query SyncTodos(
     $filter: ModelTodoFilterInput

@@ -52,6 +52,19 @@ export const schema = {
         }
     },
     "enums": {},
-    "nonModels": {},
-    "version": "4401034582a70c60713e1f7f9da3b752"
+    "nonModels": {
+        "Echo": {
+            "name": "Echo",
+            "fields": {
+                "body": {
+                    "name": "body",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            }
+        }
+    },
+    "version": "7b8a41349d2c9ba332c65610678fe7f7"
 };

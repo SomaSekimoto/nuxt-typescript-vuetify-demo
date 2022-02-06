@@ -2,7 +2,10 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 
 
-
+export declare class Echo {
+  readonly body?: string;
+  constructor(init: ModelInit<Echo>);
+}
 
 type TodoMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';

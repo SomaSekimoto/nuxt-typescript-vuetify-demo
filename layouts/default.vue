@@ -77,6 +77,11 @@ export default {
           icon: "mdi-image-multiple",
           title: "Mayu",
           to: "/mayu"
+        },
+        {
+          icon: "mdi-image-multiple",
+          title: "ConnLambda",
+          to: "/lambda"
         }
       ],
       miniVariant: false,
