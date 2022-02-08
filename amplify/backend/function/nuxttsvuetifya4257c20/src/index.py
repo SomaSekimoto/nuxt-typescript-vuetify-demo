@@ -1,12 +1,12 @@
-import json
 import requests
 import os
+import json
 
 def handler(event, context):
-  print('received event:')
-  print(event)
-
-  response = requests.get( os.getenv('FETCH_IMAGES_HOST') + '/all_files')
+  startDate = '2021-03-06'
+  endDate = '2021-03-07'
+  url = f'{os.getenv("FETCH_IMAGES_HOST")}/fetch_files?from={startDate}&to={endDate}&token={os.getenv("MAYU_DELIVERY_TOKEN")}'
+  response = requests.get(url)
   print(response.text)
   body = json.loads(response.text)
 

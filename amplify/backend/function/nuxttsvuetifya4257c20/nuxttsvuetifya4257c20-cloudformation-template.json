@@ -33,6 +33,9 @@
     },
     "fetchImagesHost": {
       "Type": "String"
+    },
+    "mayuDeliveryToken": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -99,6 +102,9 @@
             },
             "MAYU_FUNCTION_ENV": {
               "Ref": "mayuFunctionEnv"
+            },
+            "MAYU_DELIVERY_TOKEN": {
+              "Ref": "mayuDeliveryToken"
             },
             "FETCH_IMAGES_HOST": {
               "Ref": "fetchImagesHost"

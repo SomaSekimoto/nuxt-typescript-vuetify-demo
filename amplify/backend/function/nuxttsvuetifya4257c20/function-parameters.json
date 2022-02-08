@@ -13,6 +13,10 @@
       "environmentVariableName": "MAYU_FUNCTION_ENV"
     },
     {
+      "cloudFormationParameterName": "mayuDeliveryToken",
+      "environmentVariableName": "MAYU_DELIVERY_TOKEN"
+    },
+    {
       "cloudFormationParameterName": "fetchImagesHost",
       "environmentVariableName": "FETCH_IMAGES_HOST"
     }
